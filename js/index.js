@@ -58,27 +58,6 @@ rightCymbal.addEventListener("click", rightCymbalUp);
 RIGHT DRUM STUFF
 *****************/
 
-//Right Drum Animation
-var rightD = new TimelineMax({
-	paused: true
-});
-rightD.to(rightDrum, 0.1, {scale: 1.06, transformOrigin: "50% 50%", ease: Expo.easeOut})
-.to(rightDrum, 0.4, {scale: 1.03, transformOrigin: "50% 100%", ease: Elastic.easeOut});
-
-//Right Drum Audio
-function playRightDrumAudio() {
-	rightDrumAudio.currentTime = 0;
-	rightDrumAudio.play();
-}
-
-//Right Drum Complete
-function rightDrums(){
-	rightD.restart();
-	rightD.play();
-	playRightDrumAudio();
-}
-
-
 //Right Drum Audio
 function playRightDrumAudio() {
   rightDrumAudio.currentTime = 0;
@@ -86,7 +65,7 @@ function playRightDrumAudio() {
 }
 
 //Right Drum Listener
-rightDrum.addEventListener("click", rightDrums);
+rightDrum.addEventListener("click", playRightDrumAudio);
 
 
 /****************
