@@ -1,0 +1,28 @@
+body{
+	background: #FFF;
+}
+
+svg {
+	display: block;
+	margin: auto;
+}
+
+#hourhand {
+  position: absolute;
+  transform-origin: 100% 100%;
+  transform: rotate(35deg);
+}
+
+#minutehand {
+  position: absolute;
+  transform-origin: 100% 100%;
+  transform: rotate(35deg);
+}
+
+#secondhand {
+  position: absolute;
+  transform-origin: 100% 100%;
+  transform: rotate(35deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
